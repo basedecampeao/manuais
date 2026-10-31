@@ -144,16 +144,19 @@
 
   /* Lista dos manuais */
   .manuais { margin-top: 44px; border-top: 1px solid var(--linha); }
-  .manual { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--linha); align-items: baseline; }
+  .manual { display: grid; grid-template-columns: 120px minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 28px; padding: 22px 0; border-bottom: 1px solid var(--linha); align-items: center; }
+  .capa { width: 120px; height: 120px; border-radius: 8px; border: 1px solid var(--linha-fria); box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
   .manual h3 { font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.02; }
   .manual p { color: var(--suave); }
   .manual-destaque {
+    display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: center;
     margin-top: 40px; padding: 30px 30px 28px;
     background: var(--navy); border: 1px solid var(--linha); border-left: 6px solid var(--ouro); border-radius: 12px;
   }
   .manual-destaque h3 { font-size: clamp(2.2rem, 5vw, 3.4rem); color: var(--ouro); }
   .manual-destaque .linhas { margin-top: 14px; color: var(--suave); font-size: 1.08rem; max-width: 40em; }
   .manual-destaque + .manuais { margin-top: 28px; }
+  .capa-destaque { width: 240px; height: 240px; border-radius: 10px; box-shadow: 0 18px 40px rgba(0,0,0,0.45); }
   .btn-avulso {
     display: inline-block; margin-top: 12px; padding: 8px 16px; border-radius: 8px;
     border: 1px solid var(--linha); color: var(--texto); text-decoration: none; font-weight: 700; font-size: 0.92rem;
@@ -233,7 +236,11 @@
   @media (max-width: 900px) {
     .hero { padding: 40px 0 56px; }
     .hero-grid, .quem-grid, .duas-colunas { grid-template-columns: 1fr; gap: 36px; }
-    .manual { grid-template-columns: 1fr; gap: 6px; }
+    .manual { grid-template-columns: 84px 1fr; gap: 10px 16px; }
+    .manual > div { grid-column: 1 / -1; }
+    .capa { width: 84px; height: 84px; }
+    .manual-destaque { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; }
+    .capa-destaque { width: 100%; max-width: 280px; height: auto; }
     section.bloco { padding: 64px 0; }
     .cta-fixo { display: flex; }
     .topo .btn { display: none; }
@@ -327,15 +334,19 @@
   <div class="wrap">
     <h2 class="titulo-secao">O que vem no kit</h2>
     <div class="manual-destaque">
+      <img class="capa-destaque" src="capa-sair-na-frente-2027.webp" width="600" height="600" alt="Capa do manual Como sair na frente em 2027">
+      <div class="destaque-texto">
       <h3>Como sair na frente em 2027</h3>
       <div class="linhas">
         <p>O que o atleta e a família precisam fazer agora, enquanto os clubes reformulam elencos, para começar 2027 à frente.</p>
         <p>É o manual que abre o kit.</p>
       </div>
       <a class="btn-avulso so-ativo js-checkout" href="https://pay.hotmart.com/X108279822M?off=2v4inetx">Comprar só este por R$ 9,90</a>
+      </div>
     </div>
     <div class="manuais">
       <div class="manual">
+        <img class="capa" src="capa-em-que-fase.webp" width="600" height="600" loading="lazy" alt="Capa do manual Em que fase o seu filho realmente está">
         <h3>Em que fase o seu filho realmente está</h3>
         <div>
           <p>Maturação e idade biológica dos 3 aos 18 anos, e o que faz sentido cobrar em cada momento.</p>
@@ -343,13 +354,15 @@
         </div>
       </div>
       <div class="manual">
+        <img class="capa" src="capa-peneira.webp" width="600" height="600" loading="lazy" alt="Capa do manual Como brilhar em uma peneira">
         <h3>Como brilhar em uma peneira</h3>
         <div>
-          <p>Como atleta e família se preparam antes, durante e depois de uma avaliação.</p>
+          <p>Como atleta e família se preparam antes, durante e depois de uma avaliação.<br>Com bônus: cronograma de preparação para imprimir.</p>
           <a class="btn-avulso so-ativo js-checkout" href="https://pay.hotmart.com/V105642023P?off=5hkuzxwe">Comprar só este por R$ 9,90</a>
         </div>
       </div>
       <div class="manual">
+        <img class="capa" src="capa-alimentacao.webp" width="600" height="600" loading="lazy" alt="Capa do manual Alimentação de atleta">
         <h3>Alimentação de atleta</h3>
         <div>
           <p>Comida de verdade para sustentar o treino e a recuperação, sem dieta impossível.</p>
@@ -357,6 +370,7 @@
         </div>
       </div>
       <div class="manual">
+        <img class="capa" src="capa-sono.webp" width="600" height="600" loading="lazy" alt="Capa do manual Sono de atleta">
         <h3>Sono de atleta</h3>
         <div>
           <p>O treino que acontece à noite e por que ele pesa no rendimento.</p>
@@ -364,6 +378,7 @@
         </div>
       </div>
       <div class="manual">
+        <img class="capa" src="capa-treinar.webp" width="600" height="600" loading="lazy" alt="Capa do manual Treinar com disciplina">
         <h3>Treinar com disciplina</h3>
         <div>
           <p>Como construir constância nos dias comuns, que são a maioria.</p>
@@ -371,6 +386,7 @@
         </div>
       </div>
       <div class="manual">
+        <img class="capa" src="capa-celular.webp" width="600" height="600" loading="lazy" alt="Capa do manual Usar o celular com disciplina">
         <h3>Usar o celular com disciplina</h3>
         <div>
           <p>Acordos em família para o celular parar de sabotar foco, sono e reputação.</p>

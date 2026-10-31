@@ -7,6 +7,7 @@ vercel.json ........ configuração (URLs limpas: /obrigado funciona sem .html)
 og-kit.png .. imagem que aparece quando o link é compartilhado no WhatsApp
 favicon-32.png e apple-touch-icon.png . ícones
 logo-bdc.png . logo do BDC (já incluído)
+capa-*.webp ...... capas dos 7 manuais
 
 ANTES DE SUBIR: troque os links (localizar e substituir em todos os arquivos)
 COLE_AQUI_LINK_CHECKOUT_KIT ............ checkout Hotmart do kit (com o order bump do Scout configurado)
