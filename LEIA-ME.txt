@@ -1,0 +1,37 @@
+LP KIT DOS 7 MANUAIS | BLACK NOVEMBER BDC
+
+ARQUIVOS
+index.html ......... landing page do kit
+obrigado.html ...... página pós-compra com a oferta da Comunidade (50% por 3 meses)
+vercel.json ........ configuração (URLs limpas: /obrigado funciona sem .html)
+og-kit.png .. imagem que aparece quando o link é compartilhado no WhatsApp
+favicon-32.png e apple-touch-icon.png . ícones
+logo-bdc.png . logo do BDC (já incluído)
+
+ANTES DE SUBIR: troque os links (localizar e substituir em todos os arquivos)
+COLE_AQUI_LINK_CHECKOUT_KIT ............ checkout Hotmart do kit (com o order bump do Scout configurado)
+COLE_AQUI_LINK_CHECKOUT_COMUNIDADE_50 .. checkout da Comunidade com 50% nos 3 primeiros meses
+COLE_AQUI_LINK_GRUPO_WHATSAPP .......... link do grupo novo
+COLE_AQUI_LINK_MANUAL_01 ............... Como sair na frente em 2027 (avulso R$ 9,90)
+COLE_AQUI_LINK_MANUAL_02 ............... Em que fase o seu filho realmente está
+COLE_AQUI_LINK_MANUAL_03 ............... Como brilhar em uma peneira
+COLE_AQUI_LINK_MANUAL_04 ............... Alimentação de atleta
+COLE_AQUI_LINK_MANUAL_05 ............... Sono de atleta
+COLE_AQUI_LINK_MANUAL_06 ............... Treinar com disciplina
+COLE_AQUI_LINK_MANUAL_07 ............... Usar o celular com disciplina
+
+NA HOTMART
+No produto do kit, configure a página de obrigado como:
+https://manuais.basedecampeao.com.br/obrigado
+
+PRAZO
+O contador e o encerramento automático estão programados para 08/11/2026 às 23h59 (Brasília).
+Depois disso, a página troca sozinha os botões de compra pelo convite para o grupo.
+
+RASTREIO POR DISPARO
+Use links com UTM nos disparos, por exemplo:
+https://manuais.basedecampeao.com.br/?utm_source=whatsapp&utm_campaign=black&utm_content=dom01
+A página repassa esses parâmetros para o checkout da Hotmart.
+
+GOOGLE TAG MANAGER
+Está comentado no index.html. Quando tiver o ID, troque GTM-XXXXXXX e remova os marcadores de comentário.

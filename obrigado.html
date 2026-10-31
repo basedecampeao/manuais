@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seu kit está a caminho | Base de Campeão</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#031B2E">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noite: #031B2E; --navy: #042740; --navy-2: #0A3352;
+    --ouro: #e6a935; --texto: #EEF2F5; --suave: #A3B5C4;
+    --linha: rgba(230, 169, 53, 0.24); --linha-fria: rgba(238, 242, 245, 0.10);
+    --display: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+    --corpo: 'DM Sans', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--corpo); background: var(--noite); color: var(--texto); line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  [hidden] { display: none !important; }
+  :focus-visible { outline: 3px solid var(--ouro); outline-offset: 3px; border-radius: 4px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; text-transform: uppercase; line-height: 0.98; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+  .linhas p + p { margin-top: 0.55em; }
+
+  .topo { border-bottom: 1px solid var(--linha-fria); padding: 16px 0; padding-top: calc(16px + env(safe-area-inset-top, 0px)); }
+  .topo img { height: 68px; width: auto; }
+  .marca-texto { font-family: var(--display); font-weight: 800; font-size: 1.5rem; text-transform: uppercase; }
+  .marca-texto b { color: var(--ouro); }
+
+  .confirmacao { padding: 54px 0 40px; }
+  .selo { display: inline-flex; width: 52px; height: 52px; border-radius: 50%; background: var(--ouro); align-items: center; justify-content: center; margin-bottom: 22px; }
+  .selo::after { content: ""; width: 12px; height: 22px; border: solid var(--noite); border-width: 0 4px 4px 0; transform: rotate(45deg) translate(-2px, -2px); }
+  .confirmacao h1 { font-size: clamp(2.6rem, 7vw, 4.2rem); }
+  .confirmacao .linhas { margin-top: 18px; color: var(--suave); font-size: 1.08rem; }
+
+  .upsell { background: var(--navy); border: 1px solid var(--linha); border-top: 6px solid var(--ouro); border-radius: 14px; padding: 34px 30px; margin-bottom: 60px; }
+  .pre { font-weight: 700; color: var(--ouro); margin-bottom: 12px; }
+  .upsell h2 { font-size: clamp(2rem, 5vw, 3rem); }
+  .upsell .linhas { margin-top: 18px; color: var(--suave); }
+  .itens { list-style: none; display: grid; gap: 12px; margin: 24px 0 26px; }
+  .itens li { padding-left: 32px; position: relative; }
+  .itens li::before { content: ""; position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--ouro); }
+  .itens li::after { content: ""; position: absolute; left: 7px; top: 8px; width: 5px; height: 9px; border: solid var(--noite); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+  .preco-de { color: var(--suave); }
+  .preco { font-family: var(--display); font-weight: 800; color: var(--ouro); font-size: clamp(3.6rem, 11vw, 5.4rem); line-height: 0.92; margin: 4px 0 6px; }
+  .preco small { font-size: 0.4em; color: var(--texto); }
+  .depois { color: var(--suave); font-size: 0.95rem; margin-bottom: 24px; }
+  .btn { display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 1.3rem; letter-spacing: 0.5px; text-decoration: none; background: var(--ouro); color: var(--noite); padding: 16px 24px; border-radius: 8px; transition: background 0.2s ease; }
+  .btn:hover { background: #f0b847; }
+  .prazo { margin-top: 14px; font-size: 0.9rem; color: var(--suave); text-align: center; }
+  .recusar { display: block; margin-top: 18px; text-align: center; color: var(--suave); font-size: 0.95rem; }
+
+  @media (max-width: 520px) { .upsell { padding: 28px 20px; } }
+  .rodape { border-top: 1px solid var(--linha-fria); padding: 30px 0 40px; color: var(--suave); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="wrap">
+    <img src="logo-bdc.png" width="394" height="409" alt="Base de Campeão" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+    <span class="marca-texto" hidden>Base de <b>Campeão</b></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="confirmacao">
+    <span class="selo" aria-hidden="true"></span>
+    <h1>Seu kit está a caminho</h1>
+    <div class="linhas">
+      <p>O acesso aos 7 Manuais do Campeão chega no e-mail que você usou na compra.</p>
+      <p>Se não aparecer em alguns minutos, confira as pastas de spam e promoções.</p>
+    </div>
+  </section>
+
+  <section class="upsell" aria-labelledby="titulo-upsell">
+    <p class="pre">Antes de fechar esta página</p>
+    <h2 id="titulo-upsell">Os manuais dão o critério. A Comunidade dá o acompanhamento.</h2>
+    <div class="linhas">
+      <p>Na Comunidade de Desenvolvimento, a família não decide sozinha.</p>
+      <p>Você segue a formação do seu filho junto com a equipe do Base de Campeão, mês a mês.</p>
+    </div>
+    <ul class="itens">
+      <li>Aulas ao vivo e encontros em grupo com a equipe do BDC.</li>
+      <li>Conversas com ex-atletas, atletas e profissionais do esporte.</li>
+      <li>Relacionamento e conexões com clubes e agentes parceiros.</li>
+      <li>Extra Campo: a parte da formação que a escolinha não aborda.</li>
+      <li>BDC Scout incluso, com perfil do atleta e registro de jogos.</li>
+    </ul>
+    <p class="preco-de">Plano mensal: <s>R$ 227/mês</s></p>
+    <div class="preco">R$ 113,50<small>/mês</small></div>
+    <p class="depois">50% de desconto nos 3 primeiros meses, só para quem levou o kit no Black November.<br>A partir do 4º mês, segue no plano mensal de R$ 227.</p>
+    <a class="btn" href="COLE_AQUI_LINK_CHECKOUT_COMUNIDADE_50">Quero entrar na Comunidade com 50%</a>
+    <p class="prazo">Condição válida até domingo, 8 de novembro, às 23h59.</p>
+    <a class="recusar" href="https://chat.whatsapp.com/LlF0hVeScjB5rJVQCjJw49">Agora não, quero voltar para o grupo</a>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p>Dúvidas sobre o acesso? Fale com o time pelo <a href="https://wa.me/5551996917344">WhatsApp (51) 99691-7344</a>.</p>
+    <p>© 2026 Base de Campeão.</p>
+  </div>
+</footer>
+</body>
+</html>
